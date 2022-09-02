@@ -1,10 +1,12 @@
 package com.github.zhirnoov.data.repositoryImpl
 
+import com.github.zhirnoov.data.datasource.NewsRemoteDataSource
+import com.github.zhirnoov.domain.model.News
 import com.github.zhirnoov.domain.repository.NewsRepository
 
-class NewsRepositoryImpl : NewsRepository{
+class NewsRepositoryImpl(private val newsRemoteDataSource: NewsRemoteDataSource) : NewsRepository{
 
-    override fun get() {
-        TODO("Not yet implemented")
+    override suspend fun get(keyWord : String) : List<News> {
+        return newsRemoteDataSource.getNews(keyWord).body()!!.articles.map { it.toNews() }
     }
 }
