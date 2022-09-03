@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="@+id/image_news" />
 
         <TextView
-            android:id="@+id/text_desc"
+            android:id="@+id/tv_desc"
             android:layout_width="0dp"
             android:maxLines="3"
             android:ellipsize="end"
