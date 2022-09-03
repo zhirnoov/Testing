@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/Desktop/Testing/News_22Byte/app/src/main/res/drawable/logo_gradient.xml" value="0.2065" />
         <entry key="..\:/Users/user/Desktop/Testing/News_22Byte/app/src/main/res/layout/activity_main.xml" value="0.151268115942029" />
         <entry key="..\:/Users/user/Desktop/Testing/News_22Byte/app/src/main/res/layout/fragment_all_news.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/user/Desktop/Testing/News_22Byte/app/src/main/res/layout/news_row_item.xml" value="0.33689839572192515" />
