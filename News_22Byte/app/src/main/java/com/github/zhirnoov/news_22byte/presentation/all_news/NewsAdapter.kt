@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.github.zhirnoov.domain.model.News
 import com.github.zhirnoov.news_22byte.R
 
@@ -27,9 +28,11 @@ class NewsAdapter(val news: List<News>) : RecyclerView.Adapter<NewsAdapter.NewsV
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val news = news[position]
+        holder.imageNews.load(news.urlToImage)
         holder.title.text = news.title
         holder.desc.text = news.description
-        holder.date.text = news.publishedAt.substring(11, 16)
+        val time = news.publishedAt.substring(11, 16)
+        holder.date.text = "Today $time"
 
     }
 

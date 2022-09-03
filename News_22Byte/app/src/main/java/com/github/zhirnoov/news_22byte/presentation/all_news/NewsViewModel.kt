@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class NewsViewModel(private val getAllNewsUseCase: GetAllNewsUseCase) : ViewModel() {
 
-    private val newsResponse: MutableLiveData<List<News>> = MutableLiveData()
+     val newsResponse: MutableLiveData<List<News>> = MutableLiveData()
 
     fun getNews(keyWord: String) {
         viewModelScope.launch {
