@@ -8,7 +8,7 @@ import retrofit2.http.GET
 
 interface NewsApi {
 
-    @GET("v2/everything?q=bitcoin&apiKey=$API_KEY")
+    @GET("v2/top-headlines?country=ru&apiKey=$API_KEY")
     suspend fun getNews(): Response<NewsResponse>
 
 }

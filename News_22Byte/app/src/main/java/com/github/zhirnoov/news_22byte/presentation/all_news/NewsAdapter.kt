@@ -31,7 +31,9 @@ class NewsAdapter(val article: List<Article>) : RecyclerView.Adapter<NewsAdapter
         val article = article[position]
         holder.title.text = article.title
         holder.desc.text = article.description
-        holder.date.text = article.publishedAt.substring(11, 16)
+        val time = article.publishedAt.substring(11, 16)
+        val date = article.publishedAt.substring(0, 10).replace('-', '/')
+        holder.date.text = "$date $time"
         holder.imageNews.load(article.urlToImage)
 
     }
