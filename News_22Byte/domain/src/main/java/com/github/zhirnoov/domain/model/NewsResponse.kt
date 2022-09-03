@@ -1,4 +1,4 @@
-package com.github.zhirnoov.data.model
+package com.github.zhirnoov.domain.model
 
 data class NewsResponse(
     val articles: List<Article>,

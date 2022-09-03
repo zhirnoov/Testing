@@ -14,7 +14,7 @@ object NetworkService {
             .build()
     }
 
-    val api : NewsApi by lazy {
+    val api: NewsApi by lazy {
         retrofit.create(NewsApi::class.java)
     }
 }

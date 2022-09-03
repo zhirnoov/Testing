@@ -7,10 +7,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.github.zhirnoov.domain.model.News
+import com.github.zhirnoov.domain.model.Article
+import com.github.zhirnoov.domain.model.NewsResponse
 import com.github.zhirnoov.news_22byte.R
 
-class NewsAdapter(val news: List<News>) : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsAdapter(val article: List<Article>) : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.tv_title)
@@ -27,14 +28,13 @@ class NewsAdapter(val news: List<News>) : RecyclerView.Adapter<NewsAdapter.NewsV
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val news = news[position]
-        holder.imageNews.load(news.urlToImage)
-        holder.title.text = news.title
-        holder.desc.text = news.description
-        val time = news.publishedAt.substring(11, 16)
-        holder.date.text = "Today $time"
+        val article = article[position]
+        holder.title.text = article.title
+        holder.desc.text = article.description
+        holder.date.text = article.publishedAt.substring(11, 16)
+        holder.imageNews.load(article.urlToImage)
 
     }
 
-    override fun getItemCount() = news.size
+    override fun getItemCount() = article.size
 }

@@ -1,8 +1,7 @@
 package com.github.zhirnoov.domain.repository
 
-import com.github.zhirnoov.domain.model.News
+import com.github.zhirnoov.domain.model.Article
 
 interface NewsRepository {
-
-    suspend fun get(keyWord : String) : List<News>
+    suspend fun get() : List<Article>
 }
