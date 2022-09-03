@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">News</string>
+    <string name="str_title">RAY MASSEY: Check out the new MG4 EV. Or, as I\'ve dubbed it - after taking one for</string>
+    <string name="str_desc">Electric vehicles, we are often told, are the future. A whole range of carmakers and nations have plans to go…</string>
+    <string name="str_date">Cегодня 20:00</string>
 </resources>
