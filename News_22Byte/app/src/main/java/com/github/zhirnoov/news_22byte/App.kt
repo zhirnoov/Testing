@@ -13,9 +13,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
         appComponent = DaggerAppComponent.create()
-        Log.d("AAA", "Application OnCreate")
     }
 }
 

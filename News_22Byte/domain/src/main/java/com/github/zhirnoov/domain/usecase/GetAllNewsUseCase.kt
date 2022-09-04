@@ -4,7 +4,7 @@ import com.github.zhirnoov.domain.model.NewsResponse
 import com.github.zhirnoov.domain.repository.NewsRepository
 import javax.inject.Inject
 
-class GetAllNewsUseCase @Inject constructor(val newsRepository: NewsRepository) {
+class GetAllNewsUseCase @Inject constructor(private val newsRepository: NewsRepository) {
 
     suspend fun execute(): List<Article> {
         return newsRepository.get()
